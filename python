@@ -1,0 +1,26 @@
+""" You are given 2 values a, b, and the Number of test cases T.
+
+
+
+Perform integer division and print the value of a // b. In the case of a ZeroDivisionError or ValueError, print the error code using exception handling.
+
+Input format :
+The first line of input contains a positive integer representing the number of test cases.
+
+The T lines contains space-separated values of a and b
+
+Output format :
+The T lines display the output.
+
+In the case of ZeroDivisionError or ValueError, display the error code."""
+
+t = int(input())
+for _ in range(t):
+    a, b = input().split()
+    try:
+        div = int(a) // int(b)
+        print(div)
+    except ZeroDivisionError as e:
+        print(e)
+    except ValueError as e:
+        print(e)
